@@ -1,62 +1,23 @@
-<!--hello from the cloud code application - please read the following pages for more information: <a href="https://www.ng.bluemix.net/docs/#starters/mobile/mobilecloud/nodejsmobile.html#nodejsmobile">Extending Node.js to use Mobile Cloud applications</a> -->
+<div id="container">
 
-<!--<script language="javascript" type="text/javascript"></script> -->
+<div id="header">
+<title>Broken Record</title>
+<head><link rel="stylesheet" type="text/css" href="css/index.css"></head>
+</div>
+
+<div id="body">
 <body>
-<script type="text/javascript">
-	var  i = Object(1);
-	var neg;
-	var images = null;
-	var imgArray = [];
-
-	imgArray[0] = "http://blogs.longwood.edu/missfortune/files/2015/09/1.png";
-	imgArray[1] = "http://blogs.longwood.edu/missfortune/files/2015/09/2.png";
-	imgArray[2] = "http://blogs.longwood.edu/missfortune/files/2015/09/3.png";
-	imgArray[3] = "http://blogs.longwood.edu/missfortune/files/2015/09/4.png";
-	imgArray[4] = "http://blogs.longwood.edu/missfortune/files/2015/09/5.png";
-	imgArray[5] = "http://blogs.longwood.edu/missfortune/files/2015/09/6.png";
-	imgArray[6] = "http://blogs.longwood.edu/missfortune/files/2015/09/7.png";
-	imgArray[7] = "http://blogs.longwood.edu/missfortune/files/2015/09/8.png";
-	imgArray[8] = "http://blogs.longwood.edu/missfortune/files/2015/09/9.png";
-	imgArray[9] = "http://blogs.longwood.edu/missfortune/files/2015/09/10.png";
-	imgArray[10] = "http://blogs.longwood.edu/missfortune/files/2015/09/11.png";
-
-	neg = prompt("Current negative thought:", "What's on your mind?");
-
-	//image("http://blogs.longwood.edu/missfortune/files/2015/09/1-150x150.png");
-	image(imgArray[0]);
-
-	document.write('<form id="textbox" action="javascript:void(0)">Positive Thoughts:<br><input type="text" placeholder="I went outside today" onkeypress="stopSubmit(event)"><input type="reset" value="Go!" onclick="crack()"></form>');
-
-	function stopSubmit(event) {
-		event = event||window.event;
-		var key = event.keyCode;
-		if(key==13){
-			alert("here");
-			crack();
-			return false;
-		}
-	}
-
-	function image(src){
-		var tmp = document.getElementById("records");
-		if(tmp != null){
-			document.body.removeChild(tmp);
-		}
-		var img = document.createElement("img");
-		img.setAttribute("id", "records");
-		img.src = src;
-		var textbox = document.getElementById("textbox");
-		document.body.insertBefore(img, textbox);
-    }
-
-    function crack(){
-    	if(i <= 11) {
-    		image(imgArray[i]);
-    		alert("here");
-    		++i;
-    		return false;
-    	}
-    }
-
-</script>
+<h2>Welcome to Broken Record!</h2>
+<p>When people are sad, angry, scared, or nervous, we tend to get trapped in what we're going to call broken record thinking.
+We repeat the same negative things over and over to ourselves.  Tell the app what is bothering you, going around and around in your head.
+When the record appears, type in positive things to break out of your broken record thinking.</p>
+<form action="main.html"><input type="submit" value="Let's Go!"></form>
 </body>
+</div>
+
+<div id="footer">
+<footer>
+	<p><a href="hotline.html">Emergency Resources</a></p>
+</footer>
+</div>
+</div>

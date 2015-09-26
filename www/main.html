@@ -1,0 +1,81 @@
+<!--hello from the cloud code application - please read the following pages for more information: <a href="https://www.ng.bluemix.net/docs/#starters/mobile/mobilecloud/nodejsmobile.html#nodejsmobile">Extending Node.js to use Mobile Cloud applications</a> -->
+<!--<script language="javascript" type="text/javascript"></script> -->
+<title>Broken Record</title>
+<head><link rel="stylesheet" type="text/css" href="css/index.css"></head>
+<body>
+<script type="text/javascript">
+	var  i = Object(1);
+	var neg;
+	var images = null;
+	var imgArray = [];
+
+	imgArray[0] = "http://blogs.longwood.edu/missfortune/files/2015/09/12.png";
+	imgArray[1] = "http://blogs.longwood.edu/missfortune/files/2015/09/21.png";
+	imgArray[2] = "http://blogs.longwood.edu/missfortune/files/2015/09/31.png";
+	imgArray[3] = "http://blogs.longwood.edu/missfortune/files/2015/09/41.png";
+	imgArray[4] = "http://blogs.longwood.edu/missfortune/files/2015/09/61.png";
+	imgArray[5] = "http://blogs.longwood.edu/missfortune/files/2015/09/81.png";
+
+	neg = prompt("What's on your mind?", "");
+
+	image(imgArray[0]);
+
+	document.write('<form id="textbox" action="javascript:void(0)"><br><br><div class="instruct"><strong>Positive Thoughts:</strong></div><input type="text" placeholder="I went outside today" onkeypress="stopSubmit(event)"><input type="reset" value="Go!" onclick="crack()"></form>');
+
+	function stopSubmit(event) {
+		event = event||window.event;
+		var key = event.keyCode;
+		var textbox = document.getElementById("textbox");
+		if(key==13){
+			textbox.reset();
+			crack();
+			return false;
+		}
+	}
+
+	function image(src){
+		var tmp = document.getElementById("records");
+		if(tmp != null){
+			document.body.removeChild(tmp);
+		}
+		var img = document.createElement("img");
+		img.setAttribute("id", "records");
+		img.src = src;
+		var textbox = document.getElementById("textbox");
+		document.body.insertBefore(img, textbox);
+    }
+
+    function crack(){
+    	if(i < 5) {
+    		image(imgArray[i]);
+    		++i;
+    		return false;
+    	}
+    	else {
+    		var img = document.getElementById("records");
+    		var textbox = document.getElementById("textbox");
+
+    		document.body.removeChild(img);
+    		document.body.removeChild(textbox);
+
+    		var gratz = document.createElement("h2");
+    		gratz.innerHTML = "Congratulations! You broke the record!";
+    		document.body.appendChild(gratz);	
+
+    		var again = document.createElement("form");
+    		again.innerHTML = "<input type='submit' value='Break Another Record?'>";
+    		document.body.appendChild(again);
+    		
+    		var toTips = document.createElement("form");
+    		toTips.action = "tips.html";
+    		toTips.innerHTML = "<input type='submit' value='Still Feeling Down?'>";
+    		document.body.appendChild(toTips)
+
+    		/*document.write('<h2>Congratulations! You broke the record!</h2>'); */
+    		/*document.write('<form><input type="submit" value="Break Another Record?"></form><br>');
+    		document.write('<form action="tips.html"><input type="submit" value="Still Feeling Down?"></form>'); */
+    	}
+    }
+
+</script>
+</body>
