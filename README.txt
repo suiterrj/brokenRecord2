@@ -1,5 +1,5 @@
 Broken Record
-Creatos: Rebecca Suiter, Kelsey Mason, Elyce Longnaker
+Creators: Rebecca Suiter, Kelsey Mason, Elyce Longnaker
 
 Broken Record is an app designed to help people with PTSD break out of cycles of negative thinking.
 The app prompts the user to enter the negative thought cycling through their mind. They can then
