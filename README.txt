@@ -6,9 +6,9 @@ The app prompts the user to enter the negative thought cycling through their min
 enter positive statements, which crack the record until it breaks.  The app also includes some
 resources and helpful information for people with PTSD.
 
-In the future, we would like to connect Broken Record to IBM's Watson Pesonality Insights.
+In the future, we would like to connect Broken Record to IBM's Watson Personality Insights.
 We could use this to analyze user input for positivity and overall changes in tone. If a user is
-entering increasingly negative statements, the app could preemptively offer resources, or promp
+entering increasingly negative statements, the app could preemptively offer resources, or prompt
 them to see a therapist. We would also like the app to remember statements made, in order to
 offer users positive feedback or encouragement based off of tone analysis or repeated patterns.
 
